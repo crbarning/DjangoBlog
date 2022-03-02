@@ -21,5 +21,5 @@ from . import views
 urlpatterns = [
     path('', views.home),
     path('create/', views.create),
-    path('blogposts/', views.posts),
+    path('posts/', views.posts),
 ]

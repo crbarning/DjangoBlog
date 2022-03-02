@@ -8,5 +8,13 @@
 </head>
 <body>
     <h1>View posts</h1>
+    <p>{{ count }} blogposts</p>
+
+    <ul>
+        {% for blogposts in posts %}
+            <li>{{ blogposts.title }}</li>
+        {% endfor %}
+    </ul>
+
 </body>
 </html>
