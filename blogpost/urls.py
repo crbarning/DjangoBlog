@@ -19,6 +19,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.home),
-    path('create/', views.create),
+    path('', views.home, name='home'),
+    
+    path('post/<int:post_id>/', views.single_post, name='single-post'),
 ]

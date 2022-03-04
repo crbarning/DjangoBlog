@@ -7,10 +7,13 @@
     <img src="% static 'base/img/django.png' %" alt="" />
     -->
     <p>{{ home|length }} blogpost{{ home|pluralize }}.</p>
-        <ul class="posts">
+        <ul class="posts-container">
             {% for blogposts in home %}
-                <li>{{ blogposts.title }} {{ blogposts.publish_date|date:"SHORT_DATE_FORMAT" }} <br> 
-                    by: {{ blogposts.author }} <br> {{ blogposts.text }} </li>
+                <li class="post">
+                    <a href="{% url 'single-post' blogposts.id %}">{{ blogposts.title }}</a>
+                    {{ blogposts.publish_date|date:"SHORT_DATE_FORMAT" }} <br> 
+                    by: {{ blogposts.author }} <br> {{ blogposts.text }}
+                </li>
             {% endfor %}
         </ul>
 {% endblock %}

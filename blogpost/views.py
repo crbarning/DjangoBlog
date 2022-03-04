@@ -6,12 +6,14 @@ def home(request):
     blogposts = Blogpost.objects.all()
     context = {
         'home': blogposts,
-        'page_title': 'Christinas blog!',
     }
     return render(request, 'home/home.html', context)
 
-def create(request):
+
+def single_post(request, post_id):
+    selected_post = Blogpost.objects.get(id=post_id)
     context = {
-        'page_title': 'Post to the blog!',
+        'page_title': getattr(selected_post, 'title'),
+        'post': selected_post
     }
-    return render(request, 'create.html', context)
+    return render(request, 'home/single_post.html', context)
