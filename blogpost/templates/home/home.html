@@ -1,18 +1,17 @@
 {% extends "create.html" %}
 
 {% block content %}
-    <!-- Add boot strap nav-->
     <!--
     {% load static %}
     <img src="% static 'base/img/django.png' %" alt="" />
     -->
     <p>{{ home|length }} blogpost{{ home|pluralize }}.</p>
-        <ul class="posts-container">
+        <ul class="home-container">
             {% for blogposts in home %}
-                <li class="post">
-                    <a href="{% url 'single-post' blogposts.id %}">{{ blogposts.title }}</a>
-                    {{ blogposts.publish_date|date:"SHORT_DATE_FORMAT" }} <br> 
-                    by: {{ blogposts.author }} <br> {{ blogposts.text }}
+                <li class="home-post">
+                   {{ blogposts.title }} by: {{ blogposts.author }}
+                    {{ blogposts.publish_date|date:"SHORT_DATE_FORMAT" }}
+                    <a href="{% url 'single-post' blogposts.id %}">View Post</a>
                 </li>
             {% endfor %}
         </ul>

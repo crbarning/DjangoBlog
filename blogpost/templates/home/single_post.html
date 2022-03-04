@@ -3,5 +3,5 @@
 {% block content %}
     <h2>{{ post.title }}</h2>
         <p>by: {{ post.author }}<br> {{ post.text }}</p>
-
+    <a href="{% url 'home' %}">Back</a>
 {% endblock %}

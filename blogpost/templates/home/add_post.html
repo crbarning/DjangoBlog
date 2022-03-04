@@ -1,0 +1,22 @@
+{% extends "create.html" %}
+
+{% block content %}
+    <form action="{% url 'add-post' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" />
+        </div>
+        <div class="form-row">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" />
+        </div>
+        <div class="form-row">
+            <textarea name="text" id="text" cols="30" rows="10" placeholder="Write post here."></textarea>
+        </div>
+            <button type="submit">Post</button>
+    </form>
+
+    <a href="{% url 'home' %}">Back</a>
+
+{% endblock %}
