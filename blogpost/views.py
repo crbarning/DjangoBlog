@@ -8,7 +8,7 @@ def home(request):
         'home': blogposts,
         'page_title': 'Christinas blog!',
     }
-    return render(request, 'home.html', context)
+    return render(request, 'home/home.html', context)
 
 def create(request):
     context = {
