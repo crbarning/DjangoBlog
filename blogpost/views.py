@@ -3,16 +3,15 @@ from .models import Blogpost
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
-
-def posts(request):
     blogposts = Blogpost.objects.all()
-    count = blogposts.count()
     context = {
-        'posts': blogposts,
-        'count': count,
+        'home': blogposts,
+        'page_title': 'Christinas blog!',
     }
-    return render(request, 'posts.html', context)
+    return render(request, 'home.html', context)
 
 def create(request):
-    return render(request, 'create.html')
+    context = {
+        'page_title': 'Post to the blog!',
+    }
+    return render(request, 'create.html', context)
