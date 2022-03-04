@@ -10,6 +10,7 @@ def home(request):
     }
     return render(request, 'home/home.html', context)
 
+
 def all_posts(request):
     error_message = ''
     if request.method == 'POST':
