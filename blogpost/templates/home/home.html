@@ -1,18 +1,17 @@
 {% extends "create.html" %}
 
 {% block content %}
-    <!--
     {% load static %}
-    <img src="% static 'base/img/django.png' %" alt="" />
-    -->
+    <img src="{% static 'base/img/Welcome.png' %}" class="welcome-pic" alt="Welcome" />
+
     <p>{{ home|length }} blogpost{{ home|pluralize }}.</p>
-        <ul class="home-container">
+        <section class="home-container">
             {% for blogposts in home %}
-                <li class="home-post">
-                   {{ blogposts.title }} by: {{ blogposts.author }}
-                    {{ blogposts.publish_date|date:"SHORT_DATE_FORMAT" }}
+                <div class="home-post">
+                   {{ blogposts.title }} <br>by: {{ blogposts.author }}<br>
+                    {{ blogposts.publish_date|date:"SHORT_DATE_FORMAT" }}<br>
                     <a href="{% url 'single-post' blogposts.id %}">View Post</a>
-                </li>
+                </div>
             {% endfor %}
-        </ul>
+            </section>
 {% endblock %}
