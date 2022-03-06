@@ -6,8 +6,28 @@
 }
 
 .home-container {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    padding: 40px;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+}
+
+.home-post {
+    padding: 19px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    background-color: rgb(72,76,88);
+    margin: 15px;
+    opacity: 0.9;
+    color: rgb(225, 255, 255);
+}
+
+.post-count {
+    padding: 15px;
+    font-size: 1.5em;
+    color: rgb(0,0,0);
+    text-shadow: 2px 2px 5px rgb(72,76,88);
+}
+
+a {
+    color:rgb(0,0,0);
 }

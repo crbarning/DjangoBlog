@@ -4,13 +4,11 @@
     {% load static %}
     <img src="{% static 'base/img/Welcome.png' %}" class="welcome-pic" alt="Welcome" />
 
-    <p>{{ home|length }} blogpost{{ home|pluralize }}.</p>
         <section class="home-container">
+            <p class="post-count">{{ home|length }} blogpost{{ home|pluralize }}.</p>
             {% for blogposts in home %}
                 <div class="home-post">
-                   {{ blogposts.title }} <br>by: {{ blogposts.author }}<br>
-                    {{ blogposts.publish_date|date:"SHORT_DATE_FORMAT" }}<br>
-                    <a href="{% url 'single-post' blogposts.id %}">View Post</a>
+                    {{ blogposts.publish_date|date:"SHORT_DATE_FORMAT" }} {{ blogposts.title }} by: {{ blogposts.author }} <a href="{% url 'single-post' blogposts.id %}">View Post</a>   
                 </div>
             {% endfor %}
             </section>
