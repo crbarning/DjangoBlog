@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+body {
+    background-color: rgb(197, 202, 211);
+}
+
 .welcome-pic {
     margin-top: 60px;
     width: 100%;
@@ -21,35 +25,36 @@
 .home-post {
     padding: 19px;
     border-radius: 20px;
-    letter-spacing: 2px;
-    background-color: rgb(72,76,88);
-    margin: 15px;
+    letter-spacing: 1.1px;
+    box-shadow: 10px 10px 5px rgb(72, 76, 88);
+    margin: 25px;
     opacity: 0.9;
-    color: rgb(225, 255, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 .post-count {
     padding: 15px;
     font-size: 1.5em;
-    color: rgb(0,0,0);
-    text-shadow: 2px 2px 5px rgb(72,76,88);
+    color: rgb(9, 10, 12);
+    text-shadow: 2px 2px 5px rgb(72, 76, 88);
 }
 
 a {
-    color:rgb(0,0,0);
+    color:rgb(9, 10, 12);
     padding: 10px;
 }
 
 a:hover {
-    color:lightslategray;
+    color: rgb(96, 107, 128);
 }
 
 .btn {
     margin: 8px;
+    box-shadow: 2px 2px 5px rgb(72, 76, 88);
 }
 
 .posts-container {
-    margin-top: 60px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,13 +62,13 @@ a:hover {
 
 .post {
     width: 70%;
-    border: 2px solid rgb(72,76,88);
     border-radius: 20px;
     padding: 20px;
-    margin: 10px;
+    margin: 15px;
     letter-spacing: 1.1px;
     opacity: 0.9;
-    box-shadow: 10px 10px 5px rgb(154,162,178);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 5px rgb(72, 76, 88);
 }
 
 .post p {
@@ -71,7 +76,7 @@ a:hover {
 }
 
 .all-h2 {
-    text-shadow: 2px 2px 5px rgb(154,162,178);
+    text-shadow: 2px 2px 5px rgb(154, 162, 178);
     padding: 5px;
 }
 
@@ -87,10 +92,10 @@ a:hover {
     align-items: center;
     padding: 40px;
     margin: 15px;
-    border: 2px solid rgb(72,76,88);
     border-radius: 20px;
     letter-spacing: 1.1px;
-    box-shadow: 10px 10px 5px rgb(154,162,178);
+    box-shadow: 10px 10px 5px rgb(154, 162, 178);
+    background-color: rgb(255, 255, 255);
 }
 
 .form-row {
@@ -99,14 +104,14 @@ a:hover {
 }
 
 h1 {
-    text-shadow: 2px 2px 5px rgb(154,162,178);
+    text-shadow: 2px 2px 5px rgb(154, 162, 178);
     text-align: center;
     padding-bottom: 20px;
 }
 
 #title, #author, #text {
     width: 100%;
-    box-shadow: 1px 1px 2px rgb(154,162,178);
+    box-shadow: 1px 1px 2px rgb(154, 162, 178);
     border-radius: 3px;
 }
 
@@ -120,13 +125,13 @@ label {
 
 .single-post {
     width: 70%;
-    border: 2px solid rgb(72,76,88);
     border-radius: 20px;
     padding: 50px;
     letter-spacing: 1.1px;
     opacity: 0.9;
-    box-shadow: 10px 10px 5px rgb(154,162,178);
+    box-shadow: 10px 10px 5px rgb(72, 76, 88);
     margin: 150px auto;
+    background-color: rgb(255, 255, 255);
 }
 
 .single-post p {
