@@ -7,14 +7,14 @@
 
             {% for blogposts in home %}
                 <article class="post">
-                    <h2>{{ blogposts.title }}</h2>
+                    <h2 class="all-h2">{{ blogposts.title }}</h2>
                     <p>
                         by: {{ blogposts.author }} <br> date posted: {{ blogposts.publish_date|date:"SHORT_DATE_FORMAT" }} <br> {{ blogposts.text }}
                     </p>
                     <form action="{% url 'all-posts' %}" method="POST">
                         {% csrf_token %}
                         <input type="hidden" name="post_id" value="{{ home.id }}" />
-                        <button type="submit">Delete</button>
+                        <button type="submit" class="btn btn-outline-dark">Delete</button>
                     </form>
                     <a href="{% url 'single-post' blogposts.id %}">View Post</a>
                 </article>

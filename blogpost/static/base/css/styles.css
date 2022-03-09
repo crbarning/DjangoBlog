@@ -8,7 +8,7 @@
 .home-container {
     text-align: center;
     margin: auto;
-    width: 50%;
+    width: 60%;
 }
 
 .home-post {
@@ -30,4 +30,91 @@
 
 a {
     color:rgb(0,0,0);
+}
+
+a:hover {
+    color:lightslategray;
+}
+
+.posts-container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.post {
+    width: 70%;
+    border: 2px solid rgb(72,76,88);
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px;
+    letter-spacing: 1.1px;
+    opacity: 0.9;
+    box-shadow: 10px 10px 5px rgb(154,162,178);
+}
+
+.all-h2 {
+    text-shadow: 2px 2px 5px rgb(154,162,178);
+}
+
+.create-post {
+    max-width: 600px;
+    height: auto;
+    margin: 150px auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 15px;
+    border: 2px solid rgb(72,76,88);
+    border-radius: 20px;
+    letter-spacing: 1.1px;
+    box-shadow: 10px 10px 5px rgb(154,162,178);
+}
+
+.form-row {
+    padding: 5px;
+    width: 100%;
+}
+
+h1 {
+    text-shadow: 2px 2px 5px rgb(154,162,178);
+    text-align: center;
+    padding-bottom: 20px;
+}
+#title, #author, #text {
+    width: 100%;
+    box-shadow: 1px 1px 2px rgb(154,162,178);
+    border-radius: 3px;
+}
+
+.single-post {
+    width: 70%;
+    border: 2px solid rgb(72,76,88);
+    border-radius: 20px;
+    padding: 15px;
+    letter-spacing: 1.1px;
+    opacity: 0.9;
+    box-shadow: 10px 10px 5px rgb(154,162,178);
+    height: auto;
+    margin: 150px auto;
+}
+
+@media screen and (max-width: 768px) {
+   .home-container {
+       width: 90%;
+   } 
+
+    .post {
+    width: 100%;
+    }
+
+    .single-post {
+        width: 100%;
+    }
 }
